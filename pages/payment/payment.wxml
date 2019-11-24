@@ -1,0 +1,2 @@
+<!--pages/payment/payment.wxml-->
+<text>合计{{cartPrice}}元</text>

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" class="swiperImg"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="swiperImg"/>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+  <view class="goodsList">
+    <view class="list-left-menu">
+    <view wx:for="{{listData}}"  class="list-left-menu-box-unselect">
+      <view class="list-menu-name">{{item}}</view>
+    </view>
+    </view>
+    <view class="list-right-menu">
+      <scroll-view scroll-y="true" style="height: 560rpx;">
+        <view wx:for="{{goodsData}}" class = "scrollGoods">
+          <view>
+            <image src="{{item.url}}" class="goodsImg"></image>
+          </view>
+          <view class = "goodsIfo">
+            <view>{{item.name}}</view>
+            <view class="priceStyle">
+              ¥ {{item.price}}
+              <view class="iconfont icon-jiahao2fill plus-icon" data-index="{{index}}" bindtap="addToCart"></view>
+            </view>
+          </view> 
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class = "cart">
+  <view class = "cartPrice">¥{{cartPrice}}</view>
+  <view class = "cartConfirm" bindtap="goToPay">选好了</view>
+  </view>
+</view>
