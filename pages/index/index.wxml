@@ -17,7 +17,7 @@
     </view>
     </view>
     <view class="list-right-menu">
-      <scroll-view scroll-y="true" style="height: 560rpx;">
+      <scroll-view scroll-y="true" style="height: 100%;">
         <view wx:for="{{goodsData}}" class = "scrollGoods">
           <view>
             <image src="{{item.url}}" class="goodsImg"></image>
