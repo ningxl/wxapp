@@ -1,2 +1,2 @@
 <!--pages/payment/payment.wxml-->
-<text>合计{{cartPrice}}元</text>
+<text>成功付款{{cartPrice}}元</text>
